@@ -1,0 +1,142 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  margin: 30px;
+  background-image: url("assets/background.jpg");
+  padding-top: 5rem;
+  canvas {
+    height: 450px;
+    width: 600px;
+  }
+  table {
+    text-align: center;
+    align-items: center;
+    th {
+      align-content: center;
+    }
+    tr {
+      width: 400px;
+    }
+  }
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .button, .simulationButton {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding-right: 30px;
+    padding-left: 70px;
+    position: relative;
+    background-color: #f68819;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1, Color=#ff123852, Positive=true);
+
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true)";
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color=#33000000, Positive=true);
+  }
+  .button span, .simulationButton span {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  .button:hover span, .button.active span, .simulationButton:hover span, .simulationButton.active span {
+    background-color: rgb(0, 102, 26);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .button:active, .simulationButton:active {
+    margin-top: 2px;
+    margin-bottom: 13px;
+
+    -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccffffff,Positive=true)";
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1, Color=#ccffffff, Positive=true);
+  }
+
+  .simulationButton {
+    text-align: center;
+    align-items: center;
+    margin-left: 10px;
+    background-color: green;
+    position: center;
+  }
+  .simulationButton span {
+
+  }
+
+  .simulationDiv {
+    text-align: center;
+  }
+  p {
+    color: #685206;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 24px;
+    text-align: center;
+    text-justify: inter-word;
+  }
+  h1 {
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 275px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  h3 {
+    color: #111;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 32px;
+    margin: 0 0 3px;
+    text-align: left;
+  }
+
+  hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #f68819 -moz-use-text-color #FFFFFF;
+    border-style: solid none;
+    border-width: 1px 0;
+    margin: 1px 0 13px;
+  }
+
+}
+

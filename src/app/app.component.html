@@ -1,0 +1,59 @@
+<div style="text-align:center">
+
+</div>
+<br/>
+<img width="300" alt="Angular Logo" src="../assets/bitcoin_logo.svg">
+<br/>
+<div class="simulationDiv">
+  <a href="#" (click)="runSimulations()" class="simulationButton"><span>✓</span>Run simulations</a>
+
+  <div class="adder" [innerHtml]="htmlToAdd"></div>
+
+</div>
+
+
+<div *ngIf="simulationState" class="results">
+  <h3>Results:</h3>
+  <div class="article-container-inner">
+    <hr>
+  </div>
+  <table>
+    <tr>
+      <th>
+        <div>
+          <a href="#" (click)="getLinearRegressionData()" class="button"><span>✓</span>Linear regression</a>
+        </div>
+      </th>
+      <th>
+        <div>
+          <a href="#" (click)="getArimaData()" class="button"><span>✓</span>ARIMA</a>
+        </div>
+      </th>
+      <th>
+        <div>
+          <a href="#" (click)="getLstmData()" class="button"><span>✓</span>LSTM</a>
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div *ngIf="chartLr">
+          <canvas id="canvasLr">{{ chartLr }}</canvas>
+        </div>
+      </td>
+      <td>
+        <div *ngIf="chartArima">
+          <canvas id="canvasArima">{{ chartArima }}</canvas>
+        </div>
+      </td>
+      <td>
+        <div *ngIf="chartLstm">
+          <canvas id="canvasLstm">{{ chartLstm }}</canvas>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
