@@ -8,6 +8,7 @@ from flask_restful import Api
 from forecast import arima
 from forecast import linear_regression
 from forecast import lstm
+from forecast import cnn
 from forecast.data import get_btc_data
 
 app = Flask(__name__)
@@ -15,6 +16,16 @@ api = Api(app)
 
 CORS(app)
 
+
+@app.route("/test")
+def test():
+  data = get_btc_data()
+  start_date = request.args.get('start_date')
+  stop_date = request.args.get('stop_date')
+  # cnnStatus = cnn.forecast_price(start_date, stop_date, data)
+  lrStatus = linear_regression.forecast_price(start_date, stop_date, data)
+
+  return json.dumps(lrStatus)
 
 @app.route("/")
 def hello():
@@ -45,6 +56,9 @@ def linearRegressionForecast():
 def lstmForecast():
   return lstm.get_lstm_json()
 
+@app.route('/cnn', methods=('GET',))
+def cnnForecast():
+  return cnn.get_cnn_json()
 
 @app.route('/arima', methods=('GET',))
 def arimaForecast():

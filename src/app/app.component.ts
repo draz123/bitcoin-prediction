@@ -113,7 +113,7 @@ export class AppComponent {
   }
 
   getLstmData() {
-    this.httpClient.get('http://127.0.0.1:5002/lstm').subscribe(data => {
+    this.httpClient.get('http://127.0.0.1:5002/cnn').subscribe(data => {
       this.lstmData = data as JSON;
       console.log(this.lstmData);
       this.createChart(this.chartLstm, data, "canvasLstm")

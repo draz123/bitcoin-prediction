@@ -77,16 +77,7 @@ def forecast_price(start_date, stop_date, data):
       yhat_reshape = yhat_inverse.reshape(len(yhat_inverse))
     except TypeError:
       return False
-    # actual_chart = go.Scatter(x=predictDates, y=testY_reshape, name= 'Actual Price')
-    # predict_chart = go.Scatter(x=predictDates, y=yhat_reshape, name= 'Predict Price')
 
-
-
-    # fig, ax = plt.subplots(ncols=1, figsize=(8, 4))
-    # ax.plot(predictDates, yhat_inverse, 'o-')
-    # ax.set_title("Default")
-    # fig.autofmt_xdate()
-    # plt.show()
     formattedRealValues = pd.Series(testY_reshape)
     formattedForecastValues = pd.Series(yhat_reshape)
     mse = mean_squared_error(formattedRealValues,formattedForecastValues)
